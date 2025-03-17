@@ -1,5 +1,6 @@
 
 import './App.css';
+import About from './Component/About/About';
 
 function App() {
   return (
@@ -14,14 +15,15 @@ function App() {
           <li><a href='#'>Contact</a></li>
         </ul>
       </nav>
-      <div className='bars-animation'>
+      {/* <div className='bars-animation'>
         <div className='bar' style={{ '--i': 6}}></div>
         <div className='bar' style={{ '--i': 5 }}></div>
         <div className='bar' style={{ '--i': 4 }}></div>
         <div className='bar' style={{ '--i': 3 }}></div> 
         <div className='bar' style={{ '--i': 2 }}></div>
         <div className='bar' style={{ '--i': 1 }}></div>
-      </div>
+      </div> */}
+      {/* Page Home */}
       <section className='home'>
         <div className='home-info'>
           <h1>HUYNH NHAT CUONG</h1>
@@ -43,6 +45,10 @@ function App() {
           </div>
         </div>
       </section>
+      <About/>
+      {/* Page About */}
+      {/* Page Skill */}
+      {/* Page Experience */}
     </div>
   );
 }

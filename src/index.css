@@ -7,8 +7,8 @@
 body{
   /* background-color: #1f242d; */
   background-color: white;
-  animation: change-bg 0s ease-in-out forwards;
-  animation-delay: 1.6s; 
+  animation: change-bg 1s ease-in-out forwards;
+  color: white;
 }
 @keyframes change-bg {
   0% {

@@ -21,8 +21,8 @@
   z-index: 10;
   opacity: 0;
   visibility: hidden;
-  animation: show-content 1.5s ease-in-out forwards;
-  animation-delay: 1.2s;
+  animation: show-content 1s ease-in-out forwards;
+  animation-delay: 1.75s;
 }
 
 .navbar a {
@@ -57,13 +57,19 @@
   align-items: center;
   justify-content: center;
   height: auto;
-  padding: 20vh 0;
+  padding: 20vh 10%;
   color: #fff;
   gap: 50px;
   opacity: 0;
   visibility: hidden;
-  animation: show-content 1.5s ease-in-out forwards;
-  animation-delay: 1.6s;
+  animation: show-content 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+.App{
+  opacity: 0;
+  visibility: hidden;
+  animation: show-content 1s ease-in-out forwards;
+  animation-delay: 1s;
 }
 
 .home-info h1 {
