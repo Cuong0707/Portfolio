@@ -15,12 +15,12 @@ function App() {
         </ul>
       </nav>
       <div className='bars-animation'>
-        <div className='bar' style="--i:6;"></div>
-        <div className='bar' style="--i:5;"></div>
-        <div className='bar' style="--i:4;"></div>
-        <div className='bar' style="--i:3;"></div>
-        <div className='bar' style="--i:2;"></div>
-        <div className='bar' style="--i:1;"></div>
+        <div className='bar' style={{ '--i': 6}}></div>
+        <div className='bar' style={{ '--i': 5 }}></div>
+        <div className='bar' style={{ '--i': 4 }}></div>
+        <div className='bar' style={{ '--i': 3 }}></div> 
+        <div className='bar' style={{ '--i': 2 }}></div>
+        <div className='bar' style={{ '--i': 1 }}></div>
       </div>
       <section className='home'>
         <div className='home-info'>
@@ -38,7 +38,7 @@ function App() {
         <div className='home-img'>
           <div className='img-box'>
             <div className='img-item'>
-              <img src='/img/cuong2-removebg-preview.png' alt='avt'/>
+              <img src='/img/cuong2-removebg-preview.png' alt='avt' />
             </div>
           </div>
         </div>

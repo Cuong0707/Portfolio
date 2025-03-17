@@ -5,6 +5,16 @@
   font-family: 'Poppins','sans-serif';
 }
 body{
-  background-color: #1f242d;
+  /* background-color: #1f242d; */
+  background-color: white;
+  animation: change-bg 0s ease-in-out forwards;
+  animation-delay: 1.6s; 
 }
-
+@keyframes change-bg {
+  0% {
+    background-color:white;
+  }
+  100% {
+    background-color: #1f242d; 
+  }
+}
