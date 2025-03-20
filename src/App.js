@@ -1,6 +1,8 @@
 
 import './App.css';
 import About from './Component/About/About';
+import Experience from './Component/Experience/Experience';
+import Skill from './Component/Skill/Skill';
 
 function App() {
   return (
@@ -10,9 +12,9 @@ function App() {
         <ul>
           <li><a href='#'>Home</a></li>
           <li><a href='#'>About</a></li>
-          <li><a href='#'>Portfolio</a></li>
-          <li><a href='#'>Services</a></li>
-          <li><a href='#'>Contact</a></li>
+          <li><a href='#'>Project</a></li>
+          <li><a href='#'>Skill</a></li>
+          <li><a href='#'>Experience</a></li>
         </ul>
       </nav>
       {/* <div className='bars-animation'>
@@ -27,13 +29,13 @@ function App() {
       <section className='home'>
         <div className='home-info'>
           <h1>HUYNH NHAT CUONG</h1>
-          <h2>I'm aFrontend Depveloper</h2>
+          <h2>I'm a Frontend Depveloper</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptates.</p>
           <div className='btn-sci'>
             <a href='#' className='btn'>Download CV</a>
             <div className='sci'>
-              <a href='#'><i class='bx bxl-github'></i></a>
-              <a href='#'><i class='bx bxl-facebook-circle' ></i></a>
+              <a href='#'><i className='bx bxl-github'></i></a>
+              <a href='#'><i className='bx bxl-facebook-circle' ></i></a>
             </div>
           </div>
         </div>
@@ -46,9 +48,10 @@ function App() {
         </div>
       </section>
       <About/>
-      {/* Page About */}
       {/* Page Skill */}
+      <Skill/>
       {/* Page Experience */}
+      <Experience/>
     </div>
   );
 }
