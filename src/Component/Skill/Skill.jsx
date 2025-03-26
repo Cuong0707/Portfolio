@@ -12,7 +12,9 @@ const skills = [
 const Skill = () => {
     return (
         <div className="skill-container">
-            <h2>My Skills</h2>
+            <div className='title'>
+                <p>My Skill</p>
+            </div>
             <ul>
                 {skills.map((skill, index) => (
                     <li key={index} className="skill-item">

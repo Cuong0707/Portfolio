@@ -1,14 +1,28 @@
 .about{
     background-color: #2a323d;
-    padding: 0 10%;
-    text-align: center;
-    height: 85vh;
+    padding: 30px 10%;
 }
-.about button{
-    margin-top: 50px;
+.title{
+    background-color: #1c2531;
+    display: block;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    justify-self: center;
 }
 .about .about-container{
     padding-top: 30px ;
     display: flex;
     gap: 20px;
+    align-items: center;
+}
+.about .about-container .about-img{
+    width: 100%;
+}
+.about-img img{
+    width: 70%;
+}
+.about .about-container .about-content{
+    width: 100%;
+    text-align: left;
 }
