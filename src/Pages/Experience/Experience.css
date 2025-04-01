@@ -1,0 +1,15 @@
+.experience-container{
+    background-color: #2A323D;
+    padding: 30px 10%;
+    justify-content: center;
+}
+.experience-container p{
+    text-align: center;
+} 
+.experience-list{
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+;
+}

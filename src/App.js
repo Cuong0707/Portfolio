@@ -1,8 +1,9 @@
 
 import './App.css';
-import About from './Component/About/About';
-import Experience from './Component/Experience/Experience';
-import Skill from './Component/Skill/Skill';
+import About from './Pages/About/About';
+import Experience from './Pages/Experience/Experience';
+import Skill from './Pages/Skill/Skill';
+import Work from './Pages/Work/Work';
 
 function App() {
   return (
@@ -34,8 +35,12 @@ function App() {
           <div className='btn-sci'>
             <a href='#' className='btn'>Download CV</a>
             <div className='sci'>
-              <a href='#'><i className='bx bxl-github'></i></a>
-              <a href='#'><i className='bx bxl-facebook-circle' ></i></a>
+              <a href='https://github.com/Cuong0707'>
+                <i className="devicon-github-original"></i>
+              </a>
+              <a href='https://www.facebook.com/huynh.nhat.cuong.806452/'>
+                <i className="devicon-facebook-plain"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -47,11 +52,12 @@ function App() {
           </div>
         </div>
       </section>
-      <About/>
+      <About />
       {/* Page Skill */}
-      <Skill/>
+      <Skill />
       {/* Page Experience */}
-      <Experience/>
+      <Experience />
+      <Work />
     </div>
   );
 }

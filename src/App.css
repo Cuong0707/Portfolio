@@ -125,6 +125,7 @@
   color: #7cf03d;
   margin: 0 8px;
   transition: 0.5s;
+  text-decoration: none;
 }
 
 .sci a:hover {
