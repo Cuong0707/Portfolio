@@ -10,7 +10,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color:  #1f242d;
+  background-color: #1f242d;
   height: 15vh;
   width: 100%;
   padding: 25px 10%;
@@ -65,7 +65,8 @@
   animation: show-content 1s ease-in-out forwards;
   animation-delay: 1s;
 }
-.App{
+
+.App {
   opacity: 0;
   visibility: hidden;
   animation: show-content 1s ease-in-out forwards;
@@ -191,10 +192,12 @@
     opacity: 0;
     visibility: hidden;
   }
+
   50% {
     opacity: 0.5;
     visibility: visible;
   }
+
   100% {
     opacity: 1;
     visibility: visible;
@@ -206,25 +209,46 @@
     transform: translateY(0%);
   }
 }
+
 .home-img .img-box::before,
-.home-img .img-box::after{
+.home-img .img-box::after {
   content: '';
   position: absolute;
   aspect-ratio: 1/1;
   width: 100%;
-  background: conic-gradient(transparent,transparent,#7cf03d
-  ,#7cf03d);
+  background: conic-gradient(transparent, transparent, #7cf03d, #7cf03d);
 }
 
+.footer-top {
+  padding: 30px 10%;
+  background-color: #2A323D;
+  justify-items: center;
+  text-align: center;
+}
 
+.footer-top .get-in-touch {
+  font-size: small;
+  color: lightgrey;
+}
+
+.footer-top p {
+  max-width: 500px;
+}
+.footer-bottom{
+  text-align: center;
+  padding: 20px;
+  background-color: #11141B;
+}
 /* Responsive */
 @media (max-width: 1024px) {
   .navbar {
     padding: 15px 5%;
   }
+
   .navbar .logo {
     font-size: 22px;
   }
+
   .navbar ul a {
     font-size: 16px;
   }
@@ -232,12 +256,15 @@
   .home-info h1 {
     font-size: 40px;
   }
+
   .home-info h2 {
     font-size: 28px;
   }
+
   .home-info p {
     font-size: 14px;
   }
+
   .home-img .img-box {
     width: 35vw;
     height: 35vw;
@@ -250,27 +277,34 @@
     align-items: center;
     text-align: center;
   }
+
   .navbar ul {
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
   }
+
   .home {
     flex-direction: column;
   }
+
   .home-info h1 {
     font-size: 35px;
   }
+
   .home-info h2 {
     font-size: 24px;
   }
+
   .home-info p {
     font-size: 12px;
   }
+
   .btn {
     font-size: 12px;
     padding: 6px 20px;
   }
+
   .home-img .img-box {
     width: 50vw;
     height: 50vw;
@@ -281,16 +315,20 @@
   .home-info h1 {
     font-size: 28px;
   }
+
   .home-info h2 {
     font-size: 20px;
   }
+
   .home-info p {
     font-size: 10px;
   }
+
   .btn {
     font-size: 10px;
     padding: 5px 15px;
   }
+
   .home-img .img-box {
     width: 65vw;
     height: 65vw;

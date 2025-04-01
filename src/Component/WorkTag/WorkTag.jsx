@@ -1,19 +1,22 @@
 import React from 'react';
 import './WorkTag.css';
+import TechTag from '../TechTags/TechTags';
 
-const WorkTag = ({ tag }) => {
+const WorkTag = ({ title, content, techTags ,reverse=false, link}) => {
     return (
-        <div className="work-tag">
+        <div className={`${reverse ? 'reverse' : ''} work-tag`}>
             <div className='work-tag-demo'>
-                <iframe src="http://cuongvio.great-site.net/"></iframe>
+                <div className='work-tag-img'>
+                    <iframe src={link}></iframe>
+                    {console.log(link)}
+                </div>
             </div>
             <div className='work-tag-content'>
-                <h1>{tag}</h1>
+                <h1>{title}</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatibus. Quisquam, voluptatibus.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatibus. Quisquam, voluptatibus.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatibus. Quisquam, voluptatibus.
+                {content}
                 </p>
+                <TechTag Tags={techTags} />
             </div>
         </div>
     );
