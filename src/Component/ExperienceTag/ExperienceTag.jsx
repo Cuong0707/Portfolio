@@ -1,11 +1,11 @@
 import React from 'react';
 import './ExperienceTag.css';
 
-const ExperienceTag = ({ icon, title, description, time }) => {
+const ExperienceTag = ({ img, title, description, time, id }) => {
     return (
-        <div className="experience-tag">
+        <li className="experience-tag" id={id}>
             <div className="experience-tag-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original-wordmark.svg" />
+                <img src={img} alt={title}/>
             </div>
             <div className="experience-tag-content">
                 <h3 className="experience-tag-title">{title}</h3>
@@ -14,8 +14,7 @@ const ExperienceTag = ({ icon, title, description, time }) => {
                 ))}
             </div>
             <p className="experience-tag-time">{time}</p>
-
-        </div>
+        </li>
     );
 
 

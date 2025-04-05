@@ -8,11 +8,12 @@ const About = () => {
             </div>
             <div className='about-container'>
                 <div className="about-img">
-                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" />
+                    <img src="/img/avt2 - copy.jpg" alt="Avatar" />
                 </div>
                 <div className="about-content">
                     <h1>Curious about me? Here you have it:</h1>
                     <p>
+                        <br />
                         I'm a passionate, self-proclaimed designer who specializes in full stack development (React.js & SpringBoot). I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User experience, pixel perfect design, and writing clear, readable, highly performant code matters to me.
                         <br />
                         <br />

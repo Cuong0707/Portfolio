@@ -4,14 +4,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+section {
+  scroll-margin-top: 40px; /* chiều cao của sticky header */
+}
 /* Navbar */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   background-color: #1f242d;
-  height: 15vh;
+  height: 50px;
   width: 100%;
   padding: 25px 10%;
   display: flex;
@@ -276,6 +278,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
   }
 
   .navbar ul {
@@ -286,6 +289,7 @@
 
   .home {
     flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .home-info h1 {

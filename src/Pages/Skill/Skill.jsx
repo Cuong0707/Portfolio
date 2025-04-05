@@ -48,6 +48,7 @@ const Skill = () => {
                     <p>C, C++</p>
                 </div>
             </div>
+            
         </div>
     );
 };

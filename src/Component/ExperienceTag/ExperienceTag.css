@@ -1,25 +1,77 @@
-.experience-tag{
+
+.experience-tag {
     width: 100%;
-    padding: 20px 0;
+    max-width: 1200px;
+    padding: 20px;
     background-color: #1F2734;
     border-radius: 10px;
     display: flex;
-    flex-wrap: wrap;
-    margin: 0px 100px;
+    margin: 0 auto;
     box-shadow: 0px 0px 5px 0px rgb(207, 205, 205);
+    gap: 10px;
 }
-.experience-tag-icon, .experience-tag-content, .experience-tag-time{
-    width: 33%;
+.experience-tag-icon,
+.experience-tag-time {
+    width: 20%;
 }
-.experience-tag-icon img{
-    width: 100px;
-    padding: 10px;
+.experience-tag-icon {
+    order: 0;
+    text-align: center;
 }
-.experience-tag p{
+.experience-tag-time {
+    order: 2;
+}
+.experience-tag-content {
+    width: 60%;
+    margin-bottom: 10px;
+    order: 1;
+}
+
+.experience-tag-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.experience-tag-description {
+    margin-left: 20px;
+    margin-bottom: 6px;
+    text-indent: -10px;
+    padding-left: 10px;
+    line-height: 1.5;
+}
+
+.experience-tag-icon img {
+    width: 80%;
+}
+
+.experience-tag p {
     text-align: start;
     font-size: small;
     color: lightgrey;
 }
-p.experience-tag-time{
+
+p.experience-tag-time {
     text-align: end;
+}
+@media (max-width: 768px) {
+    .experience-tag{
+        flex-direction: column;
+    }
+    .experience-tag-icon{
+        order: 0;
+        width: 100%;
+    }
+    .experience-tag-content{
+        order: 2;
+        width: 100%;
+    }
+    .experience-tag-time{
+        order: 1;
+        width: 100%;
+    }
+    p.experience-tag-time {
+        text-align: start;
+    }
+    
 }

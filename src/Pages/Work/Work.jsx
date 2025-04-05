@@ -18,7 +18,7 @@ const Works = [
         title: "Project 2",
         content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatibus. Quisquam, voluptatibus.",
         techTags: ["React", "Spring Boot", "Java", "MySQL"],
-        link:'https://c-travel.vercel.app/'
+        // link:'https://c-travel.vercel.app/'
     },
 ];
 const Work = () => {

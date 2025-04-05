@@ -30,3 +30,13 @@
     font-size: small;
     color: lightgrey;
 }
+
+@media (max-width: 768px) {
+    .about .about-container{
+        flex-direction: column;
+    }
+    .about .about-container .about-img img{
+        width: 100%;
+    }
+    
+}
