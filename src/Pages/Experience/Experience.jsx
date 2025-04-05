@@ -32,7 +32,7 @@ const Experience = () => {
             <ul className='experience-list'>
                 {experienceData.map((experience, index) => (
                     <ExperienceTag
-                        id={index}
+                        key={index}
                         img={experience.img}
                         title={experience.title}
                         description={experience.description}

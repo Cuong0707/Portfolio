@@ -1,9 +1,9 @@
 import React from 'react';
 import './ExperienceTag.css';
 
-const ExperienceTag = ({ img, title, description, time, id }) => {
+const ExperienceTag = ({ img, title, description, time }) => {
     return (
-        <li className="experience-tag" id={id}>
+        <li className="experience-tag">
             <div className="experience-tag-icon">
                 <img src={img} alt={title}/>
             </div>

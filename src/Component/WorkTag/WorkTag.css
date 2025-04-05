@@ -51,4 +51,7 @@
     .work-tag-demo, .work-tag-content{
         width: 100%;
     }
+    .work-tag-content{
+        padding-bottom: 50px;
+    }
 }

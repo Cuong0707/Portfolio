@@ -8,7 +8,6 @@ const WorkTag = ({ title, content, techTags ,reverse=false, link}) => {
             <div className='work-tag-demo'>
                 <div className='work-tag-img'>
                     <iframe src={link}></iframe>
-                    {console.log(link)}
                 </div>
             </div>
             <div className='work-tag-content'>
