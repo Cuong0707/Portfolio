@@ -7,8 +7,8 @@ import Work from './Pages/Work/Work';
 
 const handleDownload = () => {
   const link = document.createElement("a");
-  link.href = process.env.PUBLIC_URL + "/EngLishCV.pdf";
-  link.download = "CV_HuynhNhatCuong.pdf";
+  link.href = process.env.PUBLIC_URL + "/EngLishCV.pdf"; 
+  link.download = "CV_HuynhNhatCuong.pdf"; 
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -20,30 +20,31 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollOffset = 50; 
-
+      const scrollOffset = 60; // chiều cao navbar hoặc khoảng cách mong muốn
+    
       for (let id of sectionIds) {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
-
+          
           // Kiểm tra nếu top của section vào trong khoảng 50px của viewport
           // và đảm bảo rằng phần này vẫn nằm trong viewport
-          if (rect.top <= scrollOffset && rect.bottom >= 0) {
+          if (rect.top <= scrollOffset && rect.bottom >= scrollOffset) {
             setActiveSection(id);
             break;
           }
         }
       }
     };
-
-
+    
+    
+  
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // chạy ngay khi component mount
-
+  
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+  
 
   return (
     <div className="App">
