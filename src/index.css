@@ -1,3 +1,4 @@
+/* global CSS */
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +14,44 @@ body{
   animation: change-bg 1s ease-in-out forwards;
   color: white;
 }
+
+/* Button */
+button {
+  position: relative;
+  color: #000;
+}
+button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+button:hover::after {
+  width: 100%;
+}
+/* Icon */
+.icon {
+  transition: transform 0.3s ease;
+}
+.icon:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
+/* Selection */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @keyframes change-bg {
   0% {
     background-color:white;

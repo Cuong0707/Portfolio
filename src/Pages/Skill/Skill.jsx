@@ -12,7 +12,7 @@ const Skill = () => {
             <p>The skills, tools and technologies i am really good at:</p>
             <div className='skill-list'>
                 <div className='skill-item'>
-                    <i className="devicon-javascript-plain colored"></i>
+                    <div className="icon"><i className="devicon-javascript-plain colored"></i></div>
                     <p>Javascript</p>
                 </div>
                 <div className='skill-item'>

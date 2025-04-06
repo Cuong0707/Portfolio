@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import About from './Pages/About/About';
 import Experience from './Pages/Experience/Experience';
 import Skill from './Pages/Skill/Skill';
@@ -12,6 +12,40 @@ const handleDownload = () => {
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
+};
+
+// Component FadeInSection
+const FadeInSection = ({ children }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); 
+        }
+      },
+      { threshold: 0.3 } // Ngưỡng khi phần tử vào view
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div ref={ref} className={`fade-in ${isVisible ? 'visible' : ''}`}>
+      {children}
+    </div>
+  );
 };
 
 function App() {
@@ -37,14 +71,11 @@ function App() {
       }
     };
     
-    
-  
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // chạy ngay khi component mount
   
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
 
   return (
     <div className="App">
@@ -87,18 +118,26 @@ function App() {
         </div>
       </section>
 
-      <section id='about'>
-        <About />
-      </section>
-      <section id='skill'>
-        <Skill />
-      </section>
-      <section id='experience'>
-        <Experience />
-      </section>
-      <section id='work'>
-        <Work />
-      </section>
+      <FadeInSection>
+        <section id='about'>
+          <About />
+        </section>
+      </FadeInSection>
+      <FadeInSection>
+        <section id='skill'>
+          <Skill />
+        </section>
+      </FadeInSection>
+      <FadeInSection>
+        <section id='experience'>
+          <Experience />
+        </section>
+      </FadeInSection>
+      <FadeInSection>
+        <section id='work'>
+          <Work />
+        </section>
+      </FadeInSection>
 
       <footer>
         <div className="footer-top">
@@ -118,6 +157,8 @@ function App() {
           <p>&copy; 2023 Huynh Nhat Cuong. All rights reserved.</p>
         </div>
       </footer>
+
+      
     </div>
   );
 }
