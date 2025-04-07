@@ -4,8 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 section {
-  scroll-margin-top: 40px; /* chiều cao của sticky header */
+  scroll-margin-top: 40px;
+  /* chiều cao của sticky header */
 }
 
 /* Navbar */
@@ -81,13 +83,64 @@ section {
 }
 
 .home-info h2 {
+  display: inline-block;
   font-size: 35px;
   margin-top: -10px;
 }
 
+.home-info h2 span {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 0.7px #7cf03d;
+  animation: display-text 16s linear infinite;
+  animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+
+  25%,
+  100% {
+    display: none;
+  }
+}
+
+.home-info h2 span::before {
+  content: attr(data-text);
+  position: absolute;
+  width: 0;
+  border-right: 2px solid #7cf03d;
+  color: #7cf03d;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+
+  10%,
+  100% {
+    width: 0;
+  }
+
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
 .home-info p {
-  font-size: 16px;
   margin: 10px 0 25px;
+}
+
+.home-info p .status-dot {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #7cf03d;
+  box-shadow: 0 0 10px #7cf03d;
+  margin-right: 8px;
 }
 
 /* Buttons */
@@ -237,11 +290,13 @@ section {
 .footer-top p {
   max-width: 500px;
 }
-.footer-bottom{
+
+.footer-bottom {
   text-align: center;
   padding: 20px;
   background-color: #11141B;
 }
+
 /* Responsive */
 @media (max-width: 1024px) {
   .navbar {
@@ -279,7 +334,7 @@ section {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
+
   }
 
   .navbar ul {

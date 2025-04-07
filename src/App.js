@@ -4,11 +4,13 @@ import About from './Pages/About/About';
 import Experience from './Pages/Experience/Experience';
 import Skill from './Pages/Skill/Skill';
 import Work from './Pages/Work/Work';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 const handleDownload = () => {
   const link = document.createElement("a");
-  link.href = process.env.PUBLIC_URL + "/EngLishCV.pdf"; 
-  link.download = "CV_HuynhNhatCuong.pdf"; 
+  link.href = process.env.PUBLIC_URL + "/EngLishCV.pdf";
+  link.download = "CV_HuynhNhatCuong.pdf";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -24,7 +26,7 @@ const FadeInSection = ({ children }) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); 
+          observer.disconnect();
         }
       },
       { threshold: 0.3 } // Ngưỡng khi phần tử vào view
@@ -55,12 +57,12 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollOffset = 60; // chiều cao navbar hoặc khoảng cách mong muốn
-    
+
       for (let id of sectionIds) {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
-          
+
           // Kiểm tra nếu top của section vào trong khoảng 50px của viewport
           // và đảm bảo rằng phần này vẫn nằm trong viewport
           if (rect.top <= scrollOffset && rect.bottom >= scrollOffset) {
@@ -70,10 +72,10 @@ function App() {
         }
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // chạy ngay khi component mount
-  
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -95,8 +97,15 @@ function App() {
       <section id='home' className='home'>
         <div className='home-info'>
           <h1>HUYNH NHAT CUONG</h1>
-          <h2>I'm a Frontend Developer</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptates.</p>
+          <h2>I'm a{" "}
+            <span style={{ "--i": 4 }} data-text="Frontend Developer"> Frontend Developer</span>
+            <span style={{ "--i": 3 }} data-text="Backend Developer">Backend Developer</span>
+            <span style={{ "--i": 2 }} data-text="Full Stack Developer">Full Stack Developer</span>
+            <span style={{ "--i": 1 }} data-text="Web Developer">Web Developer</span>
+          </h2>
+          <p>I'm a full stack developer (React.js & Springboot) with a focus on creating (and occasionally designing) exceptional digital experiences that are fast, accessible, visually appealing, and responsive. </p>
+          <p><FontAwesomeIcon icon={faLocationDot} style={{ marginRight: '8px' }} />Ho Chi Minh City, Viet Nam</p>
+          <p><span className="status-dot"></span>Available for new projects</p>
           <div className='btn-sci'>
             <a href='#' className='btn' onClick={handleDownload}>Download CV</a>
             <div className='sci'>
@@ -120,7 +129,7 @@ function App() {
 
       <FadeInSection>
         <section id='about'>
-          <About />
+          <About activeSection={activeSection}/>
         </section>
       </FadeInSection>
       <FadeInSection>
@@ -158,7 +167,7 @@ function App() {
         </div>
       </footer>
 
-      
+
     </div>
   );
 }

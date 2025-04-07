@@ -6,7 +6,7 @@
     overflow: hidden;
 }
 .work-tag:hover{
-    box-shadow: 0px 0px 5px 0px rgb(207, 205, 205);
+    box-shadow: 0 0 10px #7cf03d;
     transition: box-shadow 0.5s ease, transform 0.5s ease;
 }
 .work-tag-demo {
@@ -47,7 +47,7 @@
 
 .work-tag-content {
     width: 50%;
-    background-color: #1F2734;
+    background-color: #303942;
     padding: 2vw;
     display: flex;
     flex-direction: column;

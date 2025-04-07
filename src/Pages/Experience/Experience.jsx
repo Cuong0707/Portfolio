@@ -16,8 +16,7 @@ const experienceData = [
             "Integrated UI designs into WordPress with page builders like Elementor and WPBakery.",
             "Optimized website performance, ensuring SEO-friendly and mobile-first design.",
             "Collaborated with backend developers and designers to deliver high-quality websites for clients.",
-            "Maintained and updated existing WordPress sites based on client requirements.",
-            "..."
+            "Maintained and updated existing WordPress sites based on client requirements."
         ],
         time: "7/2024-Present"
     }

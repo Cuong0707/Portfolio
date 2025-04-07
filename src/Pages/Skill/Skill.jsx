@@ -16,35 +16,35 @@ const Skill = () => {
                     <p>Javascript</p>
                 </div>
                 <div className='skill-item'>
-                    <i className="devicon-css3-plain-wordmark colored"></i>
+                    <div className="icon"><i className="devicon-css3-plain-wordmark colored"></i></div>
                     <p>CSS</p>
                 </div>
                 <div className='skill-item'>
-                    <i className="devicon-java-plain colored"></i>
+                <div className="icon"><i className="devicon-java-plain colored"></i></div>
                     <p>Java</p>
                 </div>
                 <div className='skill-item'>
-                    <i className="devicon-react-original colored"></i>
+                <div className="icon"><i className="devicon-react-original colored"></i></div>
                     <p>ReactJS</p>
                 </div>
                 <div className='skill-item'>
-                    <i className="devicon-wordpress-plain"></i>
+                <div className="icon"><i className="devicon-wordpress-plain"></i></div>
                     <p>WordPress</p>
                 </div>
                 <div className='skill-item'>
-                    <i className="devicon-github-original"></i>
+                <div className="icon"><i className="devicon-github-original"></i></div>
                     <p>Github</p>
                 </div>
                 <div className='skill-item'>
-                    <i className="devicon-spring-original colored"></i>
+                <div className="icon"><i className="devicon-spring-original colored"></i></div>
                     <p>SpringBoot</p>
                 </div>
                 <div className='skill-item'>
-                    <i className="devicon-csharp-plain colored"></i>
+                <div className="icon"><i className="devicon-csharp-plain colored"></i></div>
                     <p>C#</p>
                 </div>
                 <div className='skill-item'>
-                    <i className="devicon-cplusplus-plain colored"></i>
+                <div className="icon"><i className="devicon-cplusplus-plain colored"></i></div>
                     <p>C, C++</p>
                 </div>
             </div>

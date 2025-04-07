@@ -51,7 +51,16 @@ button:hover::after {
   opacity: 1;
   transform: translateY(0);
 }
+/* text p */
+p{
+  font-size: small;
+  color: lightgrey;
+}
 
+/* Tag */
+.tag:hover{
+  box-shadow: 0 0 10px #7cf03d;
+}
 @keyframes change-bg {
   0% {
     background-color:white;
