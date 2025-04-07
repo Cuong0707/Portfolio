@@ -1,41 +1,46 @@
 import React from 'react';
 import './Experience.css';
 import ExperienceTag from '../../Component/ExperienceTag/ExperienceTag';
+import { useTranslation } from 'react-i18next';
 const experienceData = [
     {
         img: "/img/fpt.png",
-        title: "Information Technology Student – FPT Polytechnic College",
-        description: ["Built a full-stack web application using ReactJS and Spring Boot.",
-            "Worked in a team of 4 to simulate real-world development environment."],
-        time: "2021-2024"
+        titleKey: "experience1Title",
+        descriptionKeys: [
+            "experience1Description1",
+            "experience1Description2"
+        ],
+        timeKey: "experience1Time"
     },
     {
         img: "/img/Logo-VIO1.png",
-        title: "Fontend Developer (WordPress) - VIO Agency",
-        description: ["Developed and customized responsive WordPress themes using HTML, CSS, and JavaScript.",
-            "Integrated UI designs into WordPress with page builders like Elementor and WPBakery.",
-            "Optimized website performance, ensuring SEO-friendly and mobile-first design.",
-            "Collaborated with backend developers and designers to deliver high-quality websites for clients.",
-            "Maintained and updated existing WordPress sites based on client requirements."
+        titleKey: "experience2Title",
+        descriptionKeys: [
+            "experience2Description1",
+            "experience2Description2",
+            "experience2Description3",
+            "experience2Description4",
+            "experience2Description5"
         ],
-        time: "7/2024-Present"
+        timeKey: "experience2Time"
     }
 ];
 const Experience = () => {
+    const { t } = useTranslation();
     return (
         <div className="experience-container">
             <div className='title'>
-                <p>Experience</p>
+                <p>{t('experience')}</p>
             </div>
-            <p>Here is a quick summary of my most recent experiences:</p>
+            <p>{t('experienceTitle')}</p>
             <ul className='experience-list'>
                 {experienceData.map((experience, index) => (
                     <ExperienceTag
                         key={index}
                         img={experience.img}
-                        title={experience.title}
-                        description={experience.description}
-                        time={experience.time}
+                        title={t(experience.titleKey)}
+                        description={experience.descriptionKeys.map(key => t(key))}
+                        time={t(experience.timeKey)}
                     />
                 ))}
             </ul>

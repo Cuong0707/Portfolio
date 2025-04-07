@@ -1,6 +1,7 @@
 import React from 'react';
 import './Work.css';
 import WorkTag from '../../Component/WorkTag/WorkTag';
+import { useTranslation } from 'react-i18next';
 const Works = [
     {
         title: "Project 1",
@@ -22,12 +23,13 @@ const Works = [
     },
 ];
 const Work = () => {
+    const { t } = useTranslation();
     return (
         <div className='work-container'>
             <div className='title'>
-                <p>Work</p>
+                <p>{t('work')}</p>
             </div>
-            <p>Here are some of the projects I have worked on:</p>
+            <p>{t('workTitle')}</p>
             <div className='work-list'>
                 {Works.map((work, index) => (
                     <WorkTag

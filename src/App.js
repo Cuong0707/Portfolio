@@ -5,8 +5,11 @@ import Experience from './Pages/Experience/Experience';
 import Skill from './Pages/Skill/Skill';
 import Work from './Pages/Work/Work';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
+//hàm tải file CV
 const handleDownload = () => {
   const link = document.createElement("a");
   link.href = process.env.PUBLIC_URL + "/EngLishCV.pdf";
@@ -16,7 +19,7 @@ const handleDownload = () => {
   document.body.removeChild(link);
 };
 
-// Component FadeInSection
+// Hiệu ứng fade-in cho các section
 const FadeInSection = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef();
@@ -51,9 +54,22 @@ const FadeInSection = ({ children }) => {
 };
 
 function App() {
+  const { t, i18n } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Hàm thay đổi ngôn ngữ
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    toggleDropdown();
+  };
+  // Hàm mở/đóng dropdown
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   const [activeSection, setActiveSection] = useState('home');
   const sectionIds = ['home', 'about', 'skill', 'experience', 'work'];
-
+  // Hàm cuộn đến section tương ứng khi nhấp vào menu
   useEffect(() => {
     const handleScroll = () => {
       const scrollOffset = 60; // chiều cao navbar hoặc khoảng cách mong muốn
@@ -83,27 +99,49 @@ function App() {
     <div className="App">
       <nav className='navbar'>
         <a href='' className='logo'>Portfolio.</a>
-        <ul>
-          {sectionIds.map(id => (
-            <li key={id} className={activeSection === id ? 'active' : ''}>
-              <a href={`#${id}`}>
-                {id.charAt(0).toUpperCase() + id.slice(1)}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className='navbar-menu'>
+          <ul className='menu'>
+            {sectionIds.map(id => (
+              <li key={id} className={activeSection === id ? 'active' : ''}>
+                <a href={`#${id}`}>
+                  {t(id)}
+                </a>
+              </li>
+            ))}
+            <hr
+            style={{
+              border: 'none',
+              width: '1px',
+              height: '20px',
+              backgroundColor: 'gray',
+              marginRight: '20px',
+            }}
+          />
+          </ul>
+          <div className='language-switcher'>
+            <button onClick={toggleDropdown} className="dropbtn">
+              {t('currentLanguage')}
+            </button>
+            {isOpen && (
+              <div className="dropdown-content">
+                <button onClick={() => changeLanguage('en')}>{t('english')}</button>
+                <button onClick={() => changeLanguage('vi')}>{t('vietnamese')}</button>
+              </div>
+            )}
+          </div>
+        </div>
       </nav>
 
       <section id='home' className='home'>
         <div className='home-info'>
-          <h1>HUYNH NHAT CUONG</h1>
-          <h2>I'm a{" "}
+          <h1>{t('name')}</h1>
+          <h2>{t('im')}{" "}
             <span style={{ "--i": 4 }} data-text="Frontend Developer"> Frontend Developer</span>
             <span style={{ "--i": 3 }} data-text="Backend Developer">Backend Developer</span>
             <span style={{ "--i": 2 }} data-text="Full Stack Developer">Full Stack Developer</span>
             <span style={{ "--i": 1 }} data-text="Web Developer">Web Developer</span>
           </h2>
-          <p>I'm a full stack developer (React.js & Springboot) with a focus on creating (and occasionally designing) exceptional digital experiences that are fast, accessible, visually appealing, and responsive. </p>
+          <p>{t('sortDescription')}</p>
           <p><FontAwesomeIcon icon={faLocationDot} style={{ marginRight: '8px' }} />Ho Chi Minh City, Viet Nam</p>
           <p><span className="status-dot"></span>Available for new projects</p>
           <div className='btn-sci'>
@@ -129,7 +167,7 @@ function App() {
 
       <FadeInSection>
         <section id='about'>
-          <About activeSection={activeSection}/>
+          <About activeSection={activeSection} />
         </section>
       </FadeInSection>
       <FadeInSection>
@@ -151,11 +189,10 @@ function App() {
       <footer>
         <div className="footer-top">
           <div className='title'>
-            <p>Get in touch</p>
+            <p>{t('footerTitle')}</p>
           </div>
           <p className='get-in-touch'>
-            what's next? feel free reach out to me if you are looking for a developer,
-            have a query, or simply want to connect.
+            {t('footerText')}
           </p>
           <br /><br />
           <p>&#9993;cuonghuynhnhat2025@gmail.com</p>

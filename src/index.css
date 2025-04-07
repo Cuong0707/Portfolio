@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins','sans-serif';
+  font-family: 'Playfair Display';
 }
 html{
   scroll-behavior: smooth;
@@ -50,11 +50,6 @@ button:hover::after {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
-}
-/* text p */
-p{
-  font-size: small;
-  color: lightgrey;
 }
 
 /* Tag */

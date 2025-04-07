@@ -1,15 +1,16 @@
 import React from 'react';
 import './Skill.css';
-
+import { useTranslation } from 'react-i18next';
 
 
 const Skill = () => {
+    const { t } = useTranslation();
     return (
         <div className="skill-container">
             <div className='title'>
-                <p>My Skills</p>
+                <p>{t('skill')}</p>
             </div>
-            <p>The skills, tools and technologies i am really good at:</p>
+            <p>{t('skillTitle')}</p>
             <div className='skill-list'>
                 <div className='skill-item'>
                     <div className="icon"><i className="devicon-javascript-plain colored"></i></div>

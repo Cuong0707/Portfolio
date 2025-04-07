@@ -16,13 +16,13 @@ section {
   top: 0;
   left: 0;
   background-color: #1f242d;
-  height: 50px;
+  height: auto;
+  min-height: 50px;
   width: 100%;
   padding: 25px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
   z-index: 10;
   opacity: 0;
   visibility: hidden;
@@ -44,6 +44,8 @@ section {
   display: flex;
   list-style: none;
   gap: 20px;
+  height: 100%;
+  align-items: center;
 }
 
 .navbar ul a {
@@ -54,6 +56,60 @@ section {
 .navbar ul li:hover a,
 .navbar ul li.active a {
   color: #7cf03d;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+
+/* Button language */
+.language-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(225, 165, 165, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100px;
+}
+
+.dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  /* Đảm bảo nút chiếm toàn bộ chiều rộng */
+  border: none;
+  /* Bỏ viền cho nút */
+  background: transparent;
+  /* Nền trong suốt */
+  text-align: left;
+  /* Căn trái cho chữ */
+}
+
+.dropdown-content button:hover {
+  background-color: #f1f1f1;
 }
 
 /* Home */
@@ -131,6 +187,8 @@ section {
 
 .home-info p {
   margin: 10px 0 25px;
+  font-size:large;
+  color: lightgrey;
 }
 
 .home-info p .status-dot {
@@ -334,14 +392,9 @@ section {
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-  }
-
-  .navbar ul {
-    flex-direction: column;
     gap: 10px;
-    margin-top: 10px;
   }
+  
 
   .home {
     flex-direction: column;
@@ -370,7 +423,14 @@ section {
     height: 50vw;
   }
 }
-
+@media (max-width:610px) {
+  ul.menu{
+    display: none;
+  }
+  .navbar{
+    flex-direction: row;
+  }
+}
 @media (max-width: 480px) {
   .home-info h1 {
     font-size: 28px;
