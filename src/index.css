@@ -9,11 +9,37 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  /* background-color: #1f242d; */
-  background-color: white;
   animation: change-bg 1s ease-in-out forwards;
-  color: white;
+  color: var(--text-color);
 }
+/*theme color*/
+body.dark{
+  --bg-color1: #1F242D;
+  --bg-color2: #2A323D;
+  --tag-bg-color1: #1F2734;
+  --tag-bg-color2a: #2D333E;
+  --tag-bg-color2b: #303942;
+  --text-color: white;
+  --p-color:lightgrey;
+  --bg-color-footer:#11141B;
+}
+body.light {
+  --bg-color1: #f4f4f6;             /* nền chính - xám sữa nhẹ */
+  --bg-color2: #eaecef;             /* nền phụ - xám hơi xanh */
+  --tag-bg-color1: #e1e3e6;         /* tag nhẹ - xám nhạt */
+  --tag-bg-color2a: #d2d4d7;        /* tag đậm hơn 1 chút */
+  --tag-bg-color2b: #c5c7ca;        /* tag đậm nhất */
+  --text-color: #2e2e33;            /* màu chữ: đen nhẹ êm dịu */
+  --p-color: #4b4b4d;               /* màu chữ p: xám nhẹ */
+  --bg-color-footer: #dadce0;       /* footer: xám sáng ấm */
+
+}
+
+
+
+
+
+
 
 /* Button */
 button {
@@ -33,6 +59,7 @@ button::after {
 button:hover::after {
   width: 100%;
 }
+
 /* Icon */
 .icon {
   transition: transform 0.3s ease;
@@ -56,11 +83,19 @@ button:hover::after {
 .tag:hover{
   box-shadow: 0 0 10px #7cf03d;
 }
+
+/* p text */
+p{
+  font-size: medium;
+  color: var(--p-color);
+}
+
+
 @keyframes change-bg {
   0% {
-    background-color:white;
+    background-color:var(--text-color);
   }
   100% {
-    background-color: #1f242d; 
+    background-color: var(--bg-color1); 
   }
 }

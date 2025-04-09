@@ -11,7 +11,7 @@ const resources = {
       welcome: "Welcome to my bilingual website!",
       sortDescription: "I'm a full stack developer (React.js & Springboot) with a focus on creating (and occasionally designing) exceptional digital experiences that are fast, accessible, visually appealing, and responsive.",
       Available: "Available for new projects",
-      about: "About Me",
+      about: "About",
       aboutTitle: "Curious about me? Here you have it:",
       aboutText1: "I'm a passionate, self-taught designer and developer who specializes in full stack development (React.js & Spring Boot). I care deeply about bringing both the <strong>technical and visual</strong> aspects of digital products to life — whether it's crafting a seamless user experience, fine-tuning pixel-perfect designs, or writing clean, performant, and maintainable code.",
       aboutText2: "My journey into web development began in <strong>2018</strong>, driven by curiosity and a love for building things on the web. In <strong>2021</strong>, I took it a step further by formally studying <strong>Computer Engineering</strong> at university, where I continue to grow both academically and practically.",
@@ -22,7 +22,7 @@ const resources = {
       fact2: "🚀 Avid learner & problem solver",
       fact3: "💼 Full-time freelancer",
       fact4: "📬 Open for freelance work — feel free to reach out and say hello!",
-      skill: "My Skills",
+      skill: "Skills",
       skillTitle: "The skills, tools and technologies I am really good at:",
       experience: "Experience",
       experienceTitle: "Here is a quick summary of my most recent experiences:",
@@ -100,10 +100,10 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "vi", // Ngôn ngữ mặc định
-    fallbackLng: "en", // Ngôn ngữ dự phòng
+    lng: "en", 
+    fallbackLng: "vi", 
     interpolation: {
-      escapeValue: false // React đã bảo vệ khỏi XSS
+      escapeValue: false 
     },
   });
 

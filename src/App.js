@@ -4,11 +4,13 @@ import About from './Pages/About/About';
 import Experience from './Pages/Experience/Experience';
 import Skill from './Pages/Skill/Skill';
 import Work from './Pages/Work/Work';
+import ThemeToggle from './Theme/ThemeToggle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
 
+
+const sectionIds = ['home', 'about', 'skill', 'experience', 'work'];
 //hàm tải file CV
 const handleDownload = () => {
   const link = document.createElement("a");
@@ -25,6 +27,9 @@ const FadeInSection = ({ children }) => {
   const ref = useRef();
 
   useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+  
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -32,19 +37,16 @@ const FadeInSection = ({ children }) => {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 } // Ngưỡng khi phần tử vào view
+      { threshold: 0.3 }
     );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
+  
+    observer.observe(node);
+  
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      observer.unobserve(node); // dùng biến node đã lưu
     };
   }, []);
+  
 
   return (
     <div ref={ref} className={`fade-in ${isVisible ? 'visible' : ''}`}>
@@ -68,18 +70,17 @@ function App() {
   };
 
   const [activeSection, setActiveSection] = useState('home');
-  const sectionIds = ['home', 'about', 'skill', 'experience', 'work'];
+  
   // Hàm cuộn đến section tương ứng khi nhấp vào menu
   useEffect(() => {
     const handleScroll = () => {
-      const scrollOffset = 60; // chiều cao navbar hoặc khoảng cách mong muốn
+      const scrollOffset = 70; // chiều cao navbar hoặc khoảng cách mong muốn
 
       for (let id of sectionIds) {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
 
-          // Kiểm tra nếu top của section vào trong khoảng 50px của viewport
           // và đảm bảo rằng phần này vẫn nằm trong viewport
           if (rect.top <= scrollOffset && rect.bottom >= scrollOffset) {
             setActiveSection(id);
@@ -98,8 +99,9 @@ function App() {
   return (
     <div className="App">
       <nav className='navbar'>
-        <a href='' className='logo'>Portfolio.</a>
+        <a href='#home' className='logo'>Portfolio.</a>
         <div className='navbar-menu'>
+          <ThemeToggle />
           <ul className='menu'>
             {sectionIds.map(id => (
               <li key={id} className={activeSection === id ? 'active' : ''}>
@@ -145,7 +147,7 @@ function App() {
           <p><FontAwesomeIcon icon={faLocationDot} style={{ marginRight: '8px' }} />Ho Chi Minh City, Viet Nam</p>
           <p><span className="status-dot"></span>Available for new projects</p>
           <div className='btn-sci'>
-            <a href='#' className='btn' onClick={handleDownload}>Download CV</a>
+            <button  className='btn link-style' onClick={handleDownload}>Download CV</button>
             <div className='sci'>
               <a href='https://github.com/Cuong0707' target='_blank' rel='noopener noreferrer'>
                 <i className="devicon-github-original"></i>

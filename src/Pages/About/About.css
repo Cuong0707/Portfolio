@@ -1,5 +1,5 @@
 .about{
-    background-color: #2a323d;
+    background-color: var(--bg-color2);
     padding: 30px 10%;
 }
 .title{
@@ -25,10 +25,6 @@
 .about .about-container .about-content{
     width: 100%;
     text-align: left;
-}
-.about-content p{
-    font-size: small;
-    color: lightgrey;
 }
 
 @media (max-width: 768px) {

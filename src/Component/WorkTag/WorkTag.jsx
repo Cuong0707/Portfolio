@@ -13,7 +13,7 @@ const WorkTag = ({ title, content, techTags, reverse = false, link }) => {
         <div className={`${reverse ? 'reverse' : ''} work-tag`}>
             <div className='work-tag-demo'  onClick={() => openInNewTab(link)}>
                 <div className='work-tag-img'>
-                    <iframe src={link}></iframe>
+                    <iframe src={link} title={title}></iframe>
                     <div className="iframe-overlay"></div>
                 </div>
             </div>
