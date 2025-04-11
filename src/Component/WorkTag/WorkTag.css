@@ -10,7 +10,7 @@
     transition: box-shadow 0.5s ease, transform 0.5s ease;
 }
 .work-tag-demo {
-    background-color: #2D333E;
+    background-color: var(--bg-color2);
     width: 50%;
     display: flex;
     justify-content: center;
@@ -47,7 +47,7 @@
 
 .work-tag-content {
     width: 50%;
-    background-color: #303942;
+    background-color:var(--bg-color1);
     padding: 2vw;
     display: flex;
     flex-direction: column;

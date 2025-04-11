@@ -16,22 +16,18 @@ body{
 body.dark{
   --bg-color1: #1F242D;
   --bg-color2: #2A323D;
-  --tag-bg-color1: #1F2734;
-  --tag-bg-color2a: #2D333E;
-  --tag-bg-color2b: #303942;
+  --bg-color-label:#2A323D;
   --text-color: white;
   --p-color:lightgrey;
   --bg-color-footer:#11141B;
 }
 body.light {
-  --bg-color1: #f4f4f6;             /* nền chính - xám sữa nhẹ */
-  --bg-color2: #eaecef;             /* nền phụ - xám hơi xanh */
-  --tag-bg-color1: #e1e3e6;         /* tag nhẹ - xám nhạt */
-  --tag-bg-color2a: #d2d4d7;        /* tag đậm hơn 1 chút */
-  --tag-bg-color2b: #c5c7ca;        /* tag đậm nhất */
-  --text-color: #2e2e33;            /* màu chữ: đen nhẹ êm dịu */
-  --p-color: #4b4b4d;               /* màu chữ p: xám nhẹ */
-  --bg-color-footer: #dadce0;       /* footer: xám sáng ấm */
+  --bg-color1: 	#FDFDFD;             
+  --bg-color2: #F8F8F8;
+  --bg-color-label:#E7E6EC;            
+  --text-color: #2e2e33;            
+  --p-color: #4b4b4d;               
+  --bg-color-footer: #dadce0;       
 
 }
 

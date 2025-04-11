@@ -1,5 +1,5 @@
 .experience-container{
-    background-color: #2A323D;
+    background-color: var(--bg-color2);
     padding: 30px;
     justify-content: center;
 }

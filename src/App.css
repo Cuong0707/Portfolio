@@ -336,7 +336,7 @@ section {
 
 .footer-top {
   padding: 30px 10%;
-  background-color: #2A323D;
+  background-color: var(--bg-color2);
   justify-items: center;
   text-align: center;
 }
@@ -350,7 +350,7 @@ section {
 .footer-bottom {
   text-align: center;
   padding: 20px;
-  background-color: #11141B;
+  background-color: var(--bg-color-footer);
 }
 
 /* Responsive */

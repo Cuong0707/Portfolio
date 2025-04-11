@@ -3,7 +3,7 @@
     padding: 30px 10%;
 }
 .title{
-    background-color: #1c2531;
+    background-color: var(--bg-color-label);
     display: block;
     margin: 20px;
     border-radius: 20px;

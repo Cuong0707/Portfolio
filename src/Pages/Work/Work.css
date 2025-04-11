@@ -3,7 +3,7 @@
     justify-items: center;
 }
 .work-container .title{
-    background-color: #2A323D;
+    background-color: var(--bg-color-label);
 }
 .work-list{
     padding: 30px 0;

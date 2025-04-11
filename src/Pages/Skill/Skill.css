@@ -7,7 +7,7 @@
     text-align: center;
 }
 .skill-container .title {
-    background-color: #2A323D;
+    background-color: var(--bg-color-label);
 }
 
 .skill-list {

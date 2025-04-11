@@ -1,6 +1,6 @@
 // ThemeToggle.js
 import React, { useEffect, useState } from 'react';
-
+import './ThemeToggle.css'; 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState('dark');
 
@@ -19,7 +19,7 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button onClick={toggleTheme}>
+    <button className='btn-theme' onClick={toggleTheme}>
       Chuyển sang {theme === 'light' ? '🌙 Dark' : '🌞 Light'}
     </button>
   );
