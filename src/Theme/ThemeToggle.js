@@ -1,7 +1,9 @@
-// ThemeToggle.js
+
 import React, { useEffect, useState } from 'react';
-import './ThemeToggle.css'; 
+import './ThemeToggle.css';
+import { useTranslation } from 'react-i18next';
 const ThemeToggle = () => {
+  const { t } = useTranslation();
   const [theme, setTheme] = useState('dark');
 
   // Load theme từ localStorage nếu có
@@ -19,9 +21,12 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button className='btn-theme' onClick={toggleTheme}>
-      Chuyển sang {theme === 'light' ? '🌙 Dark' : '🌞 Light'}
-    </button>
+    <div className='btn-theme' onClick={toggleTheme}>
+      {theme === 'dark'
+        ? `${t('darkMode')} 🌙`
+        : `${t('lightMode')} 🌞`}
+    </div>
+
   );
 };
 

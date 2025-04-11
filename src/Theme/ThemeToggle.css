@@ -4,4 +4,5 @@
     cursor: pointer;
     color: var(--text-color);
     margin-right: auto;
+    text-decoration: underline !important;
 }

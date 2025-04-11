@@ -101,7 +101,7 @@ function App() {
       <nav className='navbar'>
         <a href='#home' className='logo'>Portfolio.</a>
         <div className='navbar-menu'>
-          <ThemeToggle />
+          
           <ul className='menu'>
             {sectionIds.map(id => (
               <li key={id} className={activeSection === id ? 'active' : ''}>
@@ -116,7 +116,7 @@ function App() {
               width: '1px',
               height: '20px',
               backgroundColor: 'gray',
-              marginRight: '20px',
+              marginRight: '10px',
             }}
           />
           </ul>
@@ -131,6 +131,7 @@ function App() {
               </div>
             )}
           </div>
+          <ThemeToggle />
         </div>
       </nav>
 

@@ -8,6 +8,8 @@
     display: flex;
     margin: 0 auto;
     gap: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+
 }
 .experience-tag:hover{
     box-shadow: 0 0 10px #7cf03d;

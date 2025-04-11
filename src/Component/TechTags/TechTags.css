@@ -5,7 +5,7 @@
     flex-wrap: wrap;
 }
 .tech-tag{
-    background-color: #2D333E;
+    background-color: var(--btn-tag-color);
     border-radius: 10px;
     padding: 5px 10px;
 }

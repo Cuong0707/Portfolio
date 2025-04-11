@@ -4,7 +4,8 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   en: {
     translation: {
-      
+      darkMode: "Dark",
+      lightMode: "Light",
       home: "Home",
       name: "Huynh Nhat Cuong",
       im: "I'm a",
@@ -51,6 +52,8 @@ const resources = {
   },
   vi: {
     translation: {
+      darkMode: "Tối",
+      lightMode: "Sáng", 
       home: "Trang Chủ",
       name: "Huỳnh Nhật Cường",
       im: "Tôi là",
