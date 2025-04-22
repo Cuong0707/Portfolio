@@ -29,7 +29,7 @@ const FadeInSection = ({ children }) => {
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
-  
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -37,16 +37,16 @@ const FadeInSection = ({ children }) => {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
-  
+
     observer.observe(node);
-  
+
     return () => {
       observer.unobserve(node); // dùng biến node đã lưu
     };
   }, []);
-  
+
 
   return (
     <div ref={ref} className={`fade-in ${isVisible ? 'visible' : ''}`}>
@@ -58,6 +58,7 @@ const FadeInSection = ({ children }) => {
 function App() {
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef(null);
 
   // Hàm thay đổi ngôn ngữ
   const changeLanguage = (lng) => {
@@ -70,19 +71,33 @@ function App() {
   };
 
   const [activeSection, setActiveSection] = useState('home');
-  
+
+  //Gán chiều cao nav cho các section khi mount để xác định vị trí scroll
+   useEffect(() => {
+    if (navRef.current) {
+      const navHeight = navRef.current.offsetHeight;
+
+      const sections = document.querySelectorAll('section');
+      sections.forEach((section) => {
+        section.style.scrollMarginTop = `${navHeight}px`;
+      });
+    }
+  }, []);
+
+
   // Hàm cuộn đến section tương ứng khi nhấp vào menu
   useEffect(() => {
     const handleScroll = () => {
-      const scrollOffset = 70; // chiều cao navbar hoặc khoảng cách mong muốn
-
+      //const scrollOffset = 60; 
+      const windowHeight = window.innerHeight;
+      const targetPosition = windowHeight / 2;
       for (let id of sectionIds) {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
 
           // và đảm bảo rằng phần này vẫn nằm trong viewport
-          if (rect.top <= scrollOffset && rect.bottom >= scrollOffset) {
+          if (rect.top <= targetPosition && rect.bottom >= targetPosition) {
             setActiveSection(id);
             break;
           }
@@ -98,10 +113,10 @@ function App() {
 
   return (
     <div className="App">
-      <nav className='navbar'>
-        <a href='#home' className='logo'>Portfolio.</a>
+      <nav className='navbar' ref={navRef}>
+        <a href='/home' className='logo'>Portfolio.</a>
         <div className='navbar-menu'>
-          
+
           <ul className='menu'>
             {sectionIds.map(id => (
               <li key={id} className={activeSection === id ? 'active' : ''}>
@@ -111,14 +126,14 @@ function App() {
               </li>
             ))}
             <hr
-            style={{
-              border: 'none',
-              width: '1px',
-              height: '20px',
-              backgroundColor: 'gray',
-              marginRight: '10px',
-            }}
-          />
+              style={{
+                border: 'none',
+                width: '1px',
+                height: '20px',
+                backgroundColor: 'gray',
+                marginRight: '10px',
+              }}
+            />
           </ul>
           <div className='language-switcher'>
             <button onClick={toggleDropdown} className="dropbtn">
@@ -148,7 +163,7 @@ function App() {
           <p><FontAwesomeIcon icon={faLocationDot} style={{ marginRight: '8px' }} />Ho Chi Minh City, Viet Nam</p>
           <p><span className="status-dot"></span>Available for new projects</p>
           <div className='btn-sci'>
-            <button  className='btn link-style' onClick={handleDownload}>Download CV</button>
+            <button className='btn link-style' onClick={handleDownload}>Download CV</button>
             <div className='sci'>
               <a href='https://github.com/Cuong0707' target='_blank' rel='noopener noreferrer'>
                 <i className="devicon-github-original"></i>
@@ -162,7 +177,7 @@ function App() {
         <div className='home-img'>
           <div className='img-box'>
             <div className='img-item'>
-              <img src='/img/cuong2-removebg-preview.png' alt='avt' />
+              <img src='/img/cuong2-removebg-preview.avif' alt='avt' />
             </div>
           </div>
         </div>

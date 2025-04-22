@@ -4,7 +4,7 @@ import ExperienceTag from '../../Component/ExperienceTag/ExperienceTag';
 import { useTranslation } from 'react-i18next';
 const experienceData = [
     {
-        img: "/img/fpt.png",
+        img: "/img/fpt.avif",
         titleKey: "experience1Title",
         descriptionKeys: [
             "experience1Description1",

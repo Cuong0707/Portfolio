@@ -5,10 +5,9 @@
   box-sizing: border-box;
 }
 
-section {
-  scroll-margin-top: 70px;
-  /* chiều cao của sticky header */
-}
+/* section {
+  scroll-margin-top: 90px;
+} */
 
 /* Navbar */
 .navbar {

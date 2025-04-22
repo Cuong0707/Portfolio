@@ -22,11 +22,8 @@ const ExperienceTag = ({ img, title, description, time }) => {
                 ))}
                 {description.length > 3 && (
                     <div>
-                        { !isExpanded ? (
-                            <p className="experience-tag-description">...</p>
-                        ) : null }
                         <button onClick={handleToggle} className="experience-tag-toggle-btn">
-                            {isExpanded ? 'Hide' : 'Show more'}
+                            {isExpanded ? 'Hide' : 'Show more ...'}
                         </button>
                     </div>
                 )}
