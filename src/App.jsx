@@ -1,14 +1,16 @@
 import './App.css';
-import { useEffect, useState, useRef } from 'react';
-import About from './Pages/About/About';
-import Experience from './Pages/Experience/Experience';
-import Skill from './Pages/Skill/Skill';
-import Work from './Pages/Work/Work';
+import { useEffect, useState, useRef, lazy, Suspense } from 'react';
+
+
 import ThemeToggle from './Theme/ThemeToggle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { FaLocationDot } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
 
+const About = lazy(() => import('./Pages/About/About'));
+const Experience = lazy(() => import('./Pages/Experience/Experience'));
+const Skill = lazy(() => import('./Pages/Skill/Skill'));
+const Work = lazy(() => import('./Pages/Work/Work'));
 
 const sectionIds = ['home', 'about', 'skill', 'experience', 'work'];
 //hàm tải file CV
@@ -73,7 +75,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('home');
 
   //Gán chiều cao nav cho các section khi mount để xác định vị trí scroll
-   useEffect(() => {
+  useEffect(() => {
     if (navRef.current) {
       const navHeight = navRef.current.offsetHeight;
 
@@ -160,7 +162,7 @@ function App() {
             <span style={{ "--i": 1 }} data-text="Web Developer">Web Developer</span>
           </h2>
           <p>{t('sortDescription')}</p>
-          <p><FontAwesomeIcon icon={faLocationDot} style={{ marginRight: '8px' }} />Ho Chi Minh City, Viet Nam</p>
+          <p><FontAwesomeIcon icon={FaLocationDot} style={{ marginRight: '8px' }} />Ho Chi Minh City, Viet Nam</p>
           <p><span className="status-dot"></span>Available for new projects</p>
           <div className='btn-sci'>
             <button className='btn link-style' onClick={handleDownload}>Download CV</button>
@@ -177,7 +179,7 @@ function App() {
         <div className='home-img'>
           <div className='img-box'>
             <div className='img-item'>
-              <img loading='lazy' src='/img/cuong2-removebg-preview.avif' alt='avt' />
+              <img fetchPriority="high"	 decoding="async" loading='eager' src='/img/cuong2-removebg-preview.avif' alt='avt' />
             </div>
           </div>
         </div>
@@ -185,22 +187,30 @@ function App() {
 
       <FadeInSection>
         <section id='about'>
-          <About activeSection={activeSection} />
+          <Suspense fallback={<div>Đang tải...</div>}>
+            <About activeSection={activeSection} />
+          </Suspense>
         </section>
       </FadeInSection>
       <FadeInSection>
         <section id='skill'>
-          <Skill />
+          <Suspense fallback={<div>Đang tải...</div>}>
+            <Skill />
+          </Suspense>
         </section>
       </FadeInSection>
       <FadeInSection>
         <section id='experience'>
-          <Experience />
+          <Suspense fallback={<div>Đang tải...</div>}>
+            <Experience />
+          </Suspense>
         </section>
       </FadeInSection>
       <FadeInSection>
         <section id='work'>
-          <Work />
+          <Suspense fallback={<div>Đang tải...</div>}>
+            <Work />
+          </Suspense>
         </section>
       </FadeInSection>
 
