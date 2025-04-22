@@ -8,7 +8,7 @@ const ThemeToggle = () => {
 
   // Load theme từ localStorage nếu có
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     setTheme(savedTheme);
     document.body.className = savedTheme;
   }, []);
