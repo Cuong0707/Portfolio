@@ -177,7 +177,7 @@ function App() {
         <div className='home-img'>
           <div className='img-box'>
             <div className='img-item'>
-              <img src='/img/cuong2-removebg-preview.avif' alt='avt' />
+              <img loading='lazy' src='/img/cuong2-removebg-preview.avif' alt='avt' />
             </div>
           </div>
         </div>

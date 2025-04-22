@@ -13,7 +13,7 @@ const experienceData = [
         timeKey: "experience1Time"
     },
     {
-        img: "/img/Logo-VIO1.png",
+        img: "/img/Logo-VIO1.avif",
         titleKey: "experience2Title",
         descriptionKeys: [
             "experience2Description1",

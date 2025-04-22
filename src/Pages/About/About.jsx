@@ -10,7 +10,7 @@ const About = () => {
             </div>
             <div className='about-container'>
                 <div className="about-img">
-                    <img src="/img/avt2.avif" alt="Avatar" />
+                    <img loading='lazy' src="/img/avt2.avif" alt="Avatar" />
                 </div>
                 <div className="about-content">
                     <h1>{t('aboutTitle')}</h1>

@@ -13,7 +13,7 @@ const ExperienceTag = ({ img, title, description, time }) => {
     return (
         <li className="experience-tag">
             <div className="experience-tag-icon">
-                <img src={img} alt={title} />
+                <img loading='lazy' src={img} alt={title} />
             </div>
             <div className="experience-tag-content">
                 <h3 className="experience-tag-title">{title}</h3>
