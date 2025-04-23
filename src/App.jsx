@@ -3,7 +3,6 @@ import { useEffect, useState, useRef, lazy, Suspense } from 'react';
 
 
 import ThemeToggle from './Theme/ThemeToggle';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaLocationDot } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
 
@@ -138,13 +137,13 @@ function App() {
             />
           </ul>
           <div className='language-switcher'>
-            <button onClick={toggleDropdown} className="dropbtn">
+            <button onClick={toggleDropdown} className="dropbtn btn-underline">
               {t('currentLanguage')}
             </button>
             {isOpen && (
               <div className="dropdown-content">
-                <button onClick={() => changeLanguage('en')}>{t('english')}</button>
-                <button onClick={() => changeLanguage('vi')}>{t('vietnamese')}</button>
+                <button className='btn-underline' onClick={() => changeLanguage('en')}>{t('english')}</button>
+                <button className='btn-underline' onClick={() => changeLanguage('vi')}>{t('vietnamese')}</button>
               </div>
             )}
           </div>
@@ -162,7 +161,7 @@ function App() {
             <span style={{ "--i": 1 }} data-text="Web Developer">Web Developer</span>
           </h2>
           <p>{t('sortDescription')}</p>
-          <p><FontAwesomeIcon icon={FaLocationDot} style={{ marginRight: '8px' }} />Ho Chi Minh City, Viet Nam</p>
+          <p><FaLocationDot  style={{ marginRight: '8px' }} />Ho Chi Minh City, Viet Nam</p>
           <p><span className="status-dot"></span>Available for new projects</p>
           <div className='btn-sci'>
             <button className='btn link-style' onClick={handleDownload}>Download CV</button>

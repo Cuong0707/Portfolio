@@ -8,7 +8,7 @@
     display: flex;
     margin: 0 auto;
     gap: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 
 }
 .experience-tag:hover{
@@ -66,6 +66,7 @@ p.experience-tag-time {
     padding: 4px 0;
     font-weight: 600;
     font-size: 14px;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {

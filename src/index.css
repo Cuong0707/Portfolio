@@ -26,13 +26,13 @@ body.dark{
   --btn-tag-color:#1F242D;
 }
 body.light {
-  --bg-color1: 	#EBEBEB;            
-  --bg-color2: #cecece;
+  --bg-color1: 	#FDFDFD;            
+  --bg-color2: #F8F8F8;
   --bg-color-label:#E7E6EC;    
   --bg-color-label1:#E7E6EC;     
   --bg-tag-color:#E7E6EC;  
   --text-color: #000;            
-  --p-color: #000;               
+  --p-color: #474747;               
   --bg-color-footer: #dadce0;     
   --highlight-color:#53A626;  
   --btn-tag-color:#E7E6EC;
@@ -45,22 +45,22 @@ body.light {
 
 
 /* Button */
-button {
+.btn-underline
+ {
   position: relative;
-  color: #000;
 }
-button::after {
+.btn-underline::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 1%;
   bottom: 0;
   width: 0;
   height: 2px;
   background: #000;
   transition: width 0.3s ease;
 }
-button:hover::after {
-  width: 100%;
+.btn-underline:hover::after {
+  width: 98%;
 }
 
 /* Icon */
