@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './ExperienceTag.css';
-
-const ExperienceTag = ({ img, title, description, time }) => {
+import { useTranslation } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+const ExperienceTag = ({ img, title, description, time, tag }) => {
     const [isExpanded, setIsExpanded] = useState(false);
-
+    const { t } = useTranslation();
     const handleToggle = () => {
         setIsExpanded(prev => !prev);
     };
@@ -28,7 +30,13 @@ const ExperienceTag = ({ img, title, description, time }) => {
                     </div>
                 )}
             </div>
-            <p className="experience-tag-time">{time}</p>
+            <div className="experience-tag-time">
+                <p >{time}</p>
+                <a href={`/experiencedetail/${tag}`} target="_blank">
+                    <FontAwesomeIcon icon={faUpRightFromSquare} className='icon-open' />{t('detail')}
+                </a>
+            </div>
+
         </li>
     );
 };

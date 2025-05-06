@@ -51,12 +51,21 @@
     width: 80%;
 }
 
-.experience-tag p {
+.experience-tag-time {
+    display: flex;
+    flex-direction: column;
     text-align: start;
+    justify-content: space-between;
 }
 
-p.experience-tag-time {
+.experience-tag-time p, .experience-tag-time a{
     text-align: end;
+}
+p.experience-tag-description{
+    text-align: start;
+}
+.experience-tag-time a{
+    text-decoration: none;
 }
 .experience-tag-toggle-btn {
     background: none;
@@ -74,17 +83,15 @@ p.experience-tag-time {
         flex-direction: column;
     }
     .experience-tag-icon{
-        order: 0;
         width: 60%;
         margin: 0 auto;
     }
     .experience-tag-content{
-        order: 2;
         width: 100%;
     }
     .experience-tag-time{
-        order: 1;
         width: 100%;
+        flex-direction: row;
     }
     p.experience-tag-time {
         text-align: start;

@@ -2,29 +2,7 @@ import React from 'react';
 import './Experience.css';
 import ExperienceTag from '../../Component/ExperienceTag/ExperienceTag';
 import { useTranslation } from 'react-i18next';
-const experienceData = [
-    {
-        img: "/img/fpt.avif",
-        titleKey: "experience1Title",
-        descriptionKeys: [
-            "experience1Description1",
-            "experience1Description2"
-        ],
-        timeKey: "experience1Time"
-    },
-    {
-        img: "/img/Logo-VIO1.avif",
-        titleKey: "experience2Title",
-        descriptionKeys: [
-            "experience2Description1",
-            "experience2Description2",
-            "experience2Description3",
-            "experience2Description4",
-            "experience2Description5"
-        ],
-        timeKey: "experience2Time"
-    }
-];
+import experienceData from '../../Data/experienceData.json';
 const Experience = () => {
     const { t } = useTranslation();
     return (
@@ -36,8 +14,9 @@ const Experience = () => {
             <ul className='experience-list'>
                 {experienceData.map((experience, index) => (
                     <ExperienceTag
+                        tag={t(experience.tag)}
                         key={index}
-                        img={experience.img}
+                        img={experience.logo}
                         title={t(experience.titleKey)}
                         description={experience.descriptionKeys.map(key => t(key))}
                         time={t(experience.timeKey)}
