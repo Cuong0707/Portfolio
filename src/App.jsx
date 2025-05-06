@@ -5,7 +5,7 @@ import { useEffect, useState, useRef, lazy, Suspense } from 'react';
 import ThemeToggle from './Theme/ThemeToggle';
 import { FaLocationDot } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
-
+import { initGA, trackPageView } from "./ga4";
 const About = lazy(() => import('./Pages/About/About'));
 const Experience = lazy(() => import('./Pages/Experience/Experience'));
 const Skill = lazy(() => import('./Pages/Skill/Skill'));
@@ -60,6 +60,15 @@ function App() {
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
+  const location = useLocation();
+  // Khởi tạo Google Analytics
+  useEffect(() => {
+    initGA();
+  }, []);
+  useEffect(() => {
+    trackPageView(location.pathname + location.search);
+  }, [location]);
+
 
   // Hàm thay đổi ngôn ngữ
   const changeLanguage = (lng) => {
