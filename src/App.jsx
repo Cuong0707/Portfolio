@@ -15,7 +15,7 @@ const sectionIds = ['home', 'about', 'skill', 'experience', 'work'];
 //hàm tải file CV
 const handleDownload = () => {
   const link = document.createElement("a");
-  link.href = process.env.PUBLIC_URL + "/EngLishCV.pdf";
+  link.href = process.env.PUBLIC_URL + "/CV.pdf";
   link.download = "CV_HuynhNhatCuong.pdf";
   document.body.appendChild(link);
   link.click();

@@ -34,6 +34,9 @@
     overflow: hidden;
     cursor: pointer;
     position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .iframe-overlay {
@@ -69,12 +72,13 @@ p.btn-underline::after{
     background: rgba(0, 0, 0, 0.5);
 }
 
-.work-tag-img iframe {
+.work-tag-img img {
     width: 100%;
-    aspect-ratio: 5/3;
-    min-height: 250px;
+    aspect-ratio: 5/2;
+    height: 300px;
     border-radius: 10px;
     pointer-events: none;
+    border: 0.5px solid rgba(0, 0, 0, 0.8);
 }
 
 .work-tag-content {
@@ -88,9 +92,12 @@ p.btn-underline::after{
 .work-tag-content a{
     display: flex;
     gap: 10px;
+    text-decoration-color: var(--highlight-color);
 }
 
-
+.work-tag-content p.note{
+    font-size: 12px;
+}
 
 .work-tag.reverse {
     flex-direction: row-reverse;

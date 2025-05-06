@@ -8,12 +8,12 @@ const openInNewTab = (url) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
     if (newWindow) newWindow.opener = null;
 }
-const WorkTag = ({ title, content, techTags, reverse = false, link }) => {
+const WorkTag = ({ title, content, techTags, reverse = false, link, note,image }) => {
     return (
         <div className={`${reverse ? 'reverse' : ''} work-tag`}>
             <div className='work-tag-demo'  onClick={() => openInNewTab(link)}>
                 <div className='work-tag-img'>
-                    <iframe loading="lazy" sandbox="allow-scripts allow-same-origin" src={link} title={title} ></iframe>
+                    <img loading="lazy" src={image} alt={title} ></img>
                     <div className="iframe-overlay">
                         <button className='btn-underline' >truy cập web</button>
                     </div>
@@ -23,6 +23,9 @@ const WorkTag = ({ title, content, techTags, reverse = false, link }) => {
                 <h1>{title}</h1>
                 <p>
                     {content}
+                </p>
+                <p className='note'>
+                    **{" "}{note}
                 </p>
                 <TechTag Tags={techTags} />
                 <a href={link} target='_blank' rel='noopener noreferrer'>
