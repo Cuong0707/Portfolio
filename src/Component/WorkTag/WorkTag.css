@@ -74,8 +74,7 @@ p.btn-underline::after{
 
 .work-tag-img img {
     width: 100%;
-    aspect-ratio: 5/2;
-    height: 300px;
+    aspect-ratio: 5/3;
     border-radius: 10px;
     pointer-events: none;
     border: 0.5px solid rgba(0, 0, 0, 0.8);
@@ -115,6 +114,7 @@ p.btn-underline::after{
 @media (max-width: 768px) {
     .work-tag {
         flex-direction: column;
+        margin: 0 10px;
     }
 
     .work-tag.reverse {

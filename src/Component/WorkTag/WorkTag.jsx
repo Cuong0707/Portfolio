@@ -3,12 +3,14 @@ import './WorkTag.css';
 import TechTag from '../TechTags/TechTags';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 const openInNewTab = (url) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
     if (newWindow) newWindow.opener = null;
 }
 const WorkTag = ({ title, content, techTags, reverse = false, link, note,image }) => {
+    const { t } = useTranslation();
     return (
         <div className={`${reverse ? 'reverse' : ''} work-tag`}>
             <div className='work-tag-demo'  onClick={() => openInNewTab(link)}>
@@ -30,7 +32,7 @@ const WorkTag = ({ title, content, techTags, reverse = false, link, note,image }
                 <TechTag Tags={techTags} />
                 <a href={link} target='_blank' rel='noopener noreferrer'>
                     <FontAwesomeIcon icon={faUpRightFromSquare} className='icon-open' />
-                    <p>Chi tiết công việc</p>
+                    <p>{t('detail')}</p>
                 </a>
             </div>
         </div>

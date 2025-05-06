@@ -46,6 +46,7 @@ const resources = {
       noteMyShop: "This project is currently under development and will be launched soon.",
       descriptionLifemanagementsciencelabs: "lifemanagementsciencelabs is an international organization pioneering in the field of life management science, with a mission to help people worldwide improve their quality of life based on scientific research. LMSL integrates science, art, and technology into its products and services to educate individuals about all aspects of conscious living.",
       noteLifemanagementsciencelabs: "This project is a clone of the original website (lifemanagementsciencelabs.com), has been completed 100% and is currently live.",
+      detail: "Detail",
       footerTitle: "Get in touch",
       footerText: "What's next? Feel free to reach out to me if you are looking for a developer, or just want to say hi!",
       language: "Language",
@@ -98,6 +99,7 @@ const resources = {
       descriptionLifemanagementsciencelabs: "lifemanagementsciencelabs là một tổ chức quốc tế tiên phong trong lĩnh vực khoa học quản lý cuộc sống, với sứ mệnh giúp mọi người trên toàn thế giới cải thiện chất lượng sống dựa trên nghiên cứu khoa học. LMSL tích hợp khoa học, nghệ thuật và công nghệ vào các sản phẩm và dịch vụ của mình nhằm giáo dục cá nhân về mọi khía cạnh của cuộc sống có ý thức.",
       noteMyShop: "Dự án này đang trong quá trình phát triển và sẽ sớm ra mắt.",
       noteLifemanagementsciencelabs: "Dự án clone từ trang web gốc (lifemanagementsciencelabs.com), đã hoàn thành 100% và đang hoạt động.",
+      detail: "Chi tiết",
       footerTitle: "Liên hệ",
       footerText: "Điều gì tiếp theo? Hãy thoải mái liên hệ với tôi nếu bạn đang tìm kiếm một nhà phát triển, hoặc chỉ muốn chào hỏi!",
 
