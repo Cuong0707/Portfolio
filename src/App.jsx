@@ -5,6 +5,7 @@ import { useEffect, useState, useRef, lazy, Suspense } from 'react';
 import ThemeToggle from './Theme/ThemeToggle';
 import { FaLocationDot } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from "react-router-dom";
 import { initGA, trackPageView } from "./ga4";
 const About = lazy(() => import('./Pages/About/About'));
 const Experience = lazy(() => import('./Pages/Experience/Experience'));
