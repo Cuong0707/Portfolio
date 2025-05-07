@@ -1,7 +1,6 @@
 .experience-container{
     background-color: var(--bg-color2);
     padding: 30px;
-    justify-content: center;
 }
 .experience-container p{
     text-align: center;

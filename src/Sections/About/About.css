@@ -5,10 +5,11 @@
 .title{
     background-color: var(--bg-color-label1);
     display: block;
-    margin: 20px;
+    margin: 20px auto;
     border-radius: 20px;
     padding: 10px 20px;
-    justify-self: center;
+    /* justify-self: center; */
+    width: fit-content;
 }
 .about .about-container{
     padding-top: 30px ;

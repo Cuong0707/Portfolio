@@ -167,11 +167,12 @@ function App() {
           <section id='home' className='home'>
             <div className='home-info'>
               <h1>{t('name')}</h1>
-              <h2>{t('im')}{" "}
-                <span style={{ "--i": 4 }} data-text="Frontend Developer"> Frontend Developer</span>
-                <span style={{ "--i": 3 }} data-text="Backend Developer">Backend Developer</span>
-                <span style={{ "--i": 2 }} data-text="Full Stack Developer">Full Stack Developer</span>
-                <span style={{ "--i": 1 }} data-text="Web Developer">Web Developer</span>
+              <h2>
+                {t('im')}{" "}
+                <span className="i4" data-text="Frontend Developer">Frontend Developer</span>
+                <span className="i3" data-text="Backend Developer">Backend Developer</span>
+                <span className="i2" data-text="Full Stack Developer">Full Stack Developer</span>
+                <span className="i1" data-text="Web Developer">Web Developer</span>
               </h2>
               <p>{t('sortDescription')}</p>
               <p><FaLocationDot style={{ marginRight: '8px' }} />Ho Chi Minh City, Viet Nam</p>
@@ -246,10 +247,10 @@ function App() {
 
 
         </div>
-      }/>
+      } />
       <Route path="/experiencedetail/:tag" element={
         <ExperienceDetail />
-      }/>
+      } />
     </Routes>
   );
 }
