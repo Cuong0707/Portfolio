@@ -13,6 +13,10 @@ const Skill = () => {
             <p>{t('skillTitle')}</p>
             <div className='skill-list'>
                 <div className='skill-item'>
+                    <div className="icon"><i class="devicon-html5-plain-wordmark colored"></i></div>
+                    <p>Html</p>
+                </div>
+                <div className='skill-item'>
                     <div className="icon"><i className="devicon-javascript-plain colored"></i></div>
                     <p>Javascript</p>
                 </div>
@@ -21,35 +25,43 @@ const Skill = () => {
                     <p>CSS</p>
                 </div>
                 <div className='skill-item'>
-                <div className="icon"><i className="devicon-java-plain colored"></i></div>
+                    <div className="icon"><i className="devicon-java-plain colored"></i></div>
                     <p>Java</p>
                 </div>
                 <div className='skill-item'>
-                <div className="icon"><i className="devicon-react-original colored"></i></div>
+                    <div className="icon"><i className="devicon-react-original colored"></i></div>
                     <p>ReactJS</p>
                 </div>
                 <div className='skill-item'>
-                <div className="icon"><i className="devicon-wordpress-plain"></i></div>
+                    <div className="icon"><i className="devicon-wordpress-plain"></i></div>
                     <p>WordPress</p>
                 </div>
                 <div className='skill-item'>
-                <div className="icon"><i className="devicon-github-original"></i></div>
+                    <div className="icon"><i className="devicon-github-original"></i></div>
                     <p>Github</p>
                 </div>
                 <div className='skill-item'>
-                <div className="icon"><i className="devicon-spring-original colored"></i></div>
+                    <div className="icon"><i className="devicon-spring-original colored"></i></div>
                     <p>SpringBoot</p>
                 </div>
                 <div className='skill-item'>
-                <div className="icon"><i className="devicon-csharp-plain colored"></i></div>
+                    <div className="icon"><i className="devicon-csharp-plain colored"></i></div>
                     <p>C#</p>
                 </div>
                 <div className='skill-item'>
-                <div className="icon"><i className="devicon-cplusplus-plain colored"></i></div>
+                    <div className="icon"><i className="devicon-cplusplus-plain colored"></i></div>
                     <p>C, C++</p>
                 </div>
+                <div className='skill-item'>
+                    <div className="icon"><i class="devicon-mysql-original colored"></i></div>
+                    <p>MySQL</p>
+                </div>
+                <div className='skill-item'>
+                    <div className="icon"> <i class="devicon-microsoftsqlserver-plain colored"></i></div>
+                    <p>SQLServer</p>
+                </div>
             </div>
-            
+
         </div>
     );
 };

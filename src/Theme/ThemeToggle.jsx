@@ -11,6 +11,7 @@ const ThemeToggle = () => {
     const savedTheme = 'dark'; //localStorage.getItem('theme') || 'dark';
     setTheme(savedTheme);
     document.body.className = savedTheme;
+    localStorage.setItem('theme', savedTheme);
   }, []);
 
   const toggleTheme = () => {

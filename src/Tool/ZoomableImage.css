@@ -1,0 +1,43 @@
+.image-zoom-container {
+  position: relative;
+  display: inline-block;
+  cursor: zoom-in;
+}
+
+.zoomable-image {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  cursor:zoom-in ;
+}
+
+.image-zoom-container.zoomed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  overflow-y: scroll;
+}
+.image-zoom-container.zoomed img.zoomable-image {
+  max-width: 95%!important;
+  object-fit: contain;
+  cursor: zoom-out;
+  animation: zoomSteps 0.5s ease forwards;
+}
+@keyframes zoomSteps {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+

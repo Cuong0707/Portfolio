@@ -150,7 +150,7 @@
   color: transparent;
   -webkit-text-stroke: 0.7px var(--highlight-color);
   animation: display-text 16s linear infinite;
-  opacity: 0;
+  opacity: 1;
   visibility: hidden;
 }
 
@@ -173,7 +173,7 @@
 
 @keyframes display-text {
   0% {
-    opacity: 1;
+    display: inline-block;
     visibility: visible;
   }
 

@@ -9,12 +9,12 @@
     ],
     "timeKey": "experience1Time",
     "technologies": [
-      "Wordpress",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "PHP",
-      "MySQL"
+      "devicon-wordpress-plain",
+      "devicon-html5-plain-wordmark colored",
+      "devicon-css3-plain-wordmark colored",
+      "devicon-javascript-plain colored",
+      "devicon-mysql-original colored",
+      "devicon-javascript-plain colored"
     ],
     "workList": [
       {
@@ -62,101 +62,50 @@
     ],
     "timeKey": "experience2Time",
     "technologies": [
-      "Wordpress",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "PHP",
-      "MySQL"
+      "devicon-wordpress-plain",
+      "devicon-html5-plain-wordmark colored",
+      "devicon-css3-plain-wordmark colored",
+      "devicon-javascript-plain colored",
+      "devicon-mysql-original colored"
     ],
     "workList": [
       {
-        "work": "experience1WorkList1Description",
+        "work": "Tối ưu hiệu suất website Wordpress",
         "status": "completed",
         "time": "2025-05-05",
+        "linkDemo": [
+          "quatangcongty.net",
+          "halongbayluxcruises.com",
+          "bacsihanh.vn"
+        ],
         "img": [
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif"
+          "/Data/Vio/vio1.png",
+          "/Data/Vio/vio2.png",
+          "/Data/Vio/vio3.png"
         ]
       },
       {
-        "work": "experience1WorkList2Description",
-        "status": "inProgress",
+        "work": "Clone website Wordpress",
+        "status": "completed",
         "time": "2025-05-05",
+        "linkDemo": [
+          "lmsl.vn"
+        ],
         "img": [
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif"
+          "/Data/Vio/lmsl.vn_.png"
         ]
       },
       {
-        "work": "experience1WorkList3Description",
-        "status": "inProgress",
+        "work": "Sửa lỗi giao diện, database, ssl website",
+        "status": "completed",
         "time": "2025-05-05",
+        "linkDemo": [
+           "vantaihuynhgia.vn",
+           "bacsihanh.vn",
+           "savaxluxury.vn"
+        ],
         "img": [
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif"
-        ]
-      },
-      {
-        "work": "experience1WorkList2Description",
-        "status": "inProgress",
-        "time": "2025-05-05",
-        "img": [
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif"
-        ]
-      },
-      {
-        "work": "experience1WorkList3Description",
-        "status": "inProgress",
-        "time": "2025-05-05",
-        "img": [
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif"
-        ]
-      },
-      {
-        "work": "experience1WorkList2Description",
-        "status": "inProgress",
-        "time": "2025-05-05",
-        "img": [
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif"
-        ]
-      },
-      {
-        "work": "experience1WorkList3Description",
-        "status": "inProgress",
-        "time": "2025-05-05",
-        "img": [
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif"
-        ]
-      },
-      {
-        "work": "experience1WorkList2Description",
-        "status": "inProgress",
-        "time": "2025-05-05",
-        "img": [
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif"
-        ]
-      },
-      {
-        "work": "experience1WorkList3Description",
-        "status": "inProgress",
-        "time": "2025-05-05",
-        "img": [
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif",
-          "/img/Logo-VIO1.avif"
+          "/Data/Vio/vio4.png"
         ]
       }
     ]
