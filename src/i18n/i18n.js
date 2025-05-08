@@ -1,6 +1,8 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { jsx } from 'react/jsx-runtime';
 
+const savedLanguage = localStorage.getItem("language") || "en";
 const resources = {
   en: {
     translation: {
@@ -10,6 +12,7 @@ const resources = {
       name: "Huynh Nhat Cuong",
       im: "I'm a",
       welcome: "Welcome to my bilingual website!",
+      description: "Description",
       sortDescription: "I'm a full stack developer (React.js & Springboot) with a focus on creating (and occasionally designing) exceptional digital experiences that are fast, accessible, visually appealing, and responsive.",
       Available: "Available for new projects",
       about: "About",
@@ -51,6 +54,22 @@ const resources = {
       detail: "Detail",
       footerTitle: "Get in touch",
       footerText: "What's next? Feel free to reach out to me if you are looking for a developer, or just want to say hi!",
+      
+      workList: "Job List",
+      works: "Job",
+      status: "Status",
+      result: "Result",
+      stt: "Stt",
+      projectList: "Project List",
+      demoImg: "Demo Image",
+      completed: "Completed",
+      inProgress: "In Progress",
+      jobVio1: "Optimize WordPress website performance",
+      jobVio2: "Create a copy of the website",  
+      jobVio3: "Fix website issues: SSL, interface, database, plugin",
+      jobVio4: "Create and design website interface",
+      
+
       language: "Language",
       english: "English",
       vietnamese: "Vietnamese",
@@ -65,6 +84,7 @@ const resources = {
       name: "Huỳnh Nhật Cường",
       im: "Tôi là",
       welcome: "Chào mừng bạn đến với trang web song ngữ của tôi!",
+      description: "Mô Tả",
       sortDescription: "Tôi là một nhà phát triển full stack (React.js & Springboot) tập trung vào việc tạo (và đôi khi thiết kế) những trải nghiệm kỹ thuật số đặc biệt, nhanh chóng, dễ truy cập, hấp dẫn về mặt hình ảnh và đáp ứng tốt.",
       Available: "Sẵn cho các dự án mới",
       about: "Giới Thiệu",
@@ -107,6 +127,20 @@ const resources = {
       footerTitle: "Liên hệ",
       footerText: "Điều gì tiếp theo? Hãy thoải mái liên hệ với tôi nếu bạn đang tìm kiếm một nhà phát triển, hoặc chỉ muốn chào hỏi!",
 
+      workList: "Danh sách công việc",
+      works: "Công việc",
+      status: "Trạng thái",
+      result: "Kết quả",
+      stt: "STT",
+      projectList: "Danh sách dự án",
+      demoImg: "Hình ảnh demo",
+      completed: "Hoàn thành",
+      inProgress: "Đang tiến hành",
+      jobVio1: "Tối ưu hiệu suất website Wordpress",
+      jobVio2: "Tạo bản sao Website",
+      jobVio3: "Sửa lỗi website: SSL, giao diện, database, plugin",
+      jobVio4: "Tạo và thíet kế giao diện website",
+
       language: "Ngôn ngữ",
       english: "Tiếng Anh",
       vietnamese: "Tiếng Việt",
@@ -119,7 +153,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "en", 
+    lng: savedLanguage, 
     fallbackLng: "vi", 
     interpolation: {
       escapeValue: false 

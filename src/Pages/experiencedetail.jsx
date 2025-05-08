@@ -5,6 +5,7 @@ import React, { useState, useEffect, useRef } from "react";
 import './experiencedetail.css';
 import ZoomableImage from "../Tool/ZoomableImage.jsx"
 const ExperienceDetail = () => {
+    
     const { t } = useTranslation();
     const { tag } = useParams();
     const sectionRef = useRef(null);
@@ -41,7 +42,7 @@ const ExperienceDetail = () => {
             </div>
             <div className="experience-detail-description tag">
                 <div className="experience-detail-description-text">
-                    <h2>Description</h2>
+                    <h2>{t('description')}</h2>
                     <ul>
                         {experience.descriptionKeys.map((desc, index) => (
                             <li key={index}>•{" "}{t(desc)}</li>
@@ -58,23 +59,23 @@ const ExperienceDetail = () => {
                 </div>
             </div>
             <div className="experience-detail-work-list tag">
-                <h2>Work List</h2>
+                <h2>{t('workList')}</h2>
                 <table>
                     <thead>
                         <tr>
-                            <th>Stt</th>
-                            <th>Work</th>
-                            <th>Status</th>
-                            <th>Result</th>
+                            <th>{t('stt')}</th>
+                            <th>{t('work')}</th>
+                            <th>{t('status')}</th>
+                            <th>{t('result')}</th>
                         </tr>
                     </thead>
                     <tbody>
                         {experience.workList.map((item, index) => (
                             <tr key={index}>
                                 <td>{index + 1}</td>
-                                <td>{item.work}</td>
-                                <td>{item.status}</td>
-                                <td><button onClick={() => handleResultClick(item)}>result</button></td>
+                                <td>{t(item.work)}</td>
+                                <td>{t(item.status)}</td>
+                                <td><button onClick={() => handleResultClick(item)}>{t('result')}</button></td>
                             </tr>
                         ))}
                     </tbody>
@@ -84,13 +85,13 @@ const ExperienceDetail = () => {
                 {selectedContent && (
                     <div className="work-result-container">
                         <div className="work-result-description">
-                            <h3>📃Danh sách dự án:</h3>
+                            <h3>📃{t('workList')}</h3>
                             {selectedContent.linkDemo.map((link, i) => (
                                 <a key={i} href={`https://${link}`} target="_blank" rel="noopener noreferrer">•&nbsp;{link}</a>
                             ))}
                         </div>
                         <div className="work-result-images">
-                            <h3>📸 Một số hình ảnh demo: </h3>
+                            <h3>📸 {t('demoImg')} </h3>
                             {selectedContent.img.map((src, i) => (
                                 <ZoomableImage
                                     key={i}

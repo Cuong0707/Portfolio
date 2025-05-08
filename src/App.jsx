@@ -75,6 +75,7 @@ function App() {
   // Hàm thay đổi ngôn ngữ
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    localStorage.setItem('language', lng); 
     toggleDropdown();
   };
   // Hàm mở/đóng dropdown
